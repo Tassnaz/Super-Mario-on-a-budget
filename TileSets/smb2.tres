@@ -1,6 +1,7 @@
-[gd_resource type="TileSet" load_steps=3 format=3 uid="uid://dc5vxjxvc6fph"]
+[gd_resource type="TileSet" load_steps=5 format=3 uid="uid://dc5vxjxvc6fph"]
 
 [ext_resource type="Texture2D" uid="uid://bf4ty62cba0yk" path="res://Assets/smb2 tiles.png" id="1_3q1en"]
+[ext_resource type="Texture2D" uid="uid://bfnovmuvw7say" path="res://Assets/birdo.png" id="2_if87f"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_a3qa6"]
 texture = ExtResource("1_3q1en")
@@ -4424,6 +4425,17 @@ texture = ExtResource("1_3q1en")
 31:31/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 31:31/0/physics_layer_0/angular_velocity = 0.0
 
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_rwqws"]
+texture = ExtResource("2_if87f")
+18:0/size_in_atlas = Vector2i(2, 5)
+18:0/animation_columns = 2
+18:0/animation_frame_0/duration = 1.0
+18:0/animation_frame_1/duration = 1.0
+18:0/0 = 0
+18:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+18:0/0/physics_layer_0/angular_velocity = 0.0
+
 [resource]
 physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_a3qa6")
+sources/1 = SubResource("TileSetAtlasSource_rwqws")
