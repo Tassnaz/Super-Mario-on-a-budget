@@ -4,10 +4,10 @@ extends CharacterBody2D
 var Gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 
 @export var Speed = 150.0
-@export var  MaxFallSpeed = 200.0
 @export var JumpForce = 350
 @export var Accel = 10
 @export var Friction = 0.1
+var  MaxFallSpeed = 200.0
 
 var PlayerStarPos = Vector2()
 
@@ -15,7 +15,7 @@ func _ready():
 	PlayerStarPos = self.position
 	
 func _physics_process(delta):
-	# Lägger till gravitationen om spelaren inte är på marken.
+	# Gravity
 	if not is_on_floor():
 		velocity.y += Gravity * delta
 	
@@ -24,7 +24,7 @@ func _physics_process(delta):
 	
 	velocity.x = clamp(velocity.x, -Speed, Speed)
 	
-	# Rör spelaren höger/vänster
+	# Move right/left
 	if Input.is_action_pressed("Right"):
 		velocity.x += Accel
 		$Sprite2D.scale.x = 1
@@ -47,7 +47,7 @@ func _physics_process(delta):
 	move_and_slide()
 	
 	
-	# Kolla om spelaren är på marken OCH man har tryckt på "Jump"
+	# Jump
 	if is_on_floor() and Input.is_action_just_pressed("Jump"):
 		velocity.y = -JumpForce
 		$JumpSound.play(0.14)
@@ -61,6 +61,6 @@ func _physics_process(delta):
 	if Input.is_action_just_pressed("Respawn"):
 		self.position = PlayerStarPos
 	
-	if position.y > 200:
-		self.position = PlayerStarPos
+	#if position.y > 200:
+		#self.position = PlayerStarPos
 
