@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://ydnsv8vu06r0"]
+[gd_scene load_steps=11 format=3 uid="uid://ydnsv8vu06r0"]
 
 [ext_resource type="Script" path="res://Scripts/cameraFollow.gd" id="1_66nfo"]
 [ext_resource type="TileSet" uid="uid://2k0djpssx2q0" path="res://TileSets/OverWorldTiles.tres" id="2_1f3ec"]
@@ -8,6 +8,7 @@
 [ext_resource type="AudioStream" uid="uid://cdee4gkc7iaai" path="res://Sounds/01-main-theme-overworld.mp3" id="4_y50rm"]
 [ext_resource type="PackedScene" uid="uid://b6nd052t1na27" path="res://Scenes/go_to_next_lvl.tscn" id="5_hr6b2"]
 [ext_resource type="Script" path="res://Scenes/KillArea.gd" id="6_gnbp7"]
+[ext_resource type="Texture2D" uid="uid://ch2qmmw8pijx1" path="res://Assets/coin animated.png" id="9_i6wo2"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ekupx"]
 size = Vector2(4526.5, 18)
@@ -15,6 +16,20 @@ size = Vector2(4526.5, 18)
 [node name="Level 1" type="Node2D"]
 position = Vector2(7, 27)
 script = ExtResource("1_66nfo")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+layer = 2
+
+[node name="HP UI" type="Label" parent="CanvasLayer"]
+offset_right = 87.0
+offset_bottom = 51.0
+theme_override_constants/line_spacing = 100
+theme_override_fonts/font = ExtResource("4_aa6mv")
+theme_override_font_sizes/font_size = 40
+text = "lives:"
+horizontal_alignment = 1
+vertical_alignment = 1
+script = ExtResource("4_a50r6")
 
 [node name="OverWorldTiles" type="TileMap" parent="."]
 position = Vector2(1, 0)
@@ -51,16 +66,12 @@ script = ExtResource("6_gnbp7")
 position = Vector2(2264.75, 43)
 shape = SubResource("RectangleShape2D_ekupx")
 
-[node name="HP UI" type="Label" parent="."]
-offset_left = 59.0
-offset_top = -112.0
-offset_right = 146.0
-offset_bottom = -61.0
-theme_override_constants/line_spacing = 100
-theme_override_fonts/font = ExtResource("4_aa6mv")
-text = "lives:"
-horizontal_alignment = 1
-vertical_alignment = 1
-script = ExtResource("4_a50r6")
+[node name="Coin" type="Area2D" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="Coin"]
+position = Vector2(370, 4)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("9_i6wo2")
+hframes = 10
 
 [connection signal="body_entered" from="KillArea" to="KillArea" method="_on_body_entered"]
