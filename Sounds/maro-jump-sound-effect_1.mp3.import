@@ -13,7 +13,7 @@ dest_files=["res://.godot/imported/maro-jump-sound-effect_1.mp3-d6683d4e4f5bed36
 [params]
 
 loop=false
-loop_offset=0
-bpm=0
+loop_offset=0.0
+bpm=0.0
 beat_count=0
 bar_beats=4

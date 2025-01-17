@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://b66a0n0r8prqt"
+path="res://.godot/imported/cashmoney sound effect.mp3-3fc9d88ae51db201d17741314bb8e240.mp3str"
+
+[deps]
+
+source_file="res://Sounds/cashmoney sound effect.mp3"
+dest_files=["res://.godot/imported/cashmoney sound effect.mp3-3fc9d88ae51db201d17741314bb8e240.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

@@ -1,10 +1,8 @@
-[gd_scene load_steps=12 format=3 uid="uid://5orma837byed"]
+[gd_scene load_steps=16 format=3 uid="uid://5orma837byed"]
 
+[ext_resource type="Script" path="res://Scripts/coin.gd" id="1_jgl7m"]
 [ext_resource type="Texture2D" uid="uid://ydlivm08j6h6" path="res://Assets/coin animation bra.png" id="1_y38gc"]
-
-[sub_resource type="GDScript" id="GDScript_rx5ko"]
-script/source = "extends Area2D
-"
+[ext_resource type="AudioStream" uid="uid://b66a0n0r8prqt" path="res://Sounds/cashmoney sound effect.mp3" id="3_13n4v"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_w8tch"]
 atlas = ExtResource("1_y38gc")
@@ -66,8 +64,106 @@ animations = [{
 [sub_resource type="CircleShape2D" id="CircleShape2D_44gcr"]
 radius = 9.0
 
+[sub_resource type="Animation" id="Animation_1sdcs"]
+resource_name = "Pickup"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../AnimatedSprite2D:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../CollisionShape2D:disabled")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".:playing")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/3/type = "method"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("..")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0.6),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"queue_free"
+}]
+}
+
+[sub_resource type="Animation" id="Animation_tdwnv"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../AnimatedSprite2D:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../CollisionShape2D:disabled")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".:playing")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_qsb3l"]
+_data = {
+"Pickup": SubResource("Animation_1sdcs"),
+"RESET": SubResource("Animation_tdwnv")
+}
+
 [node name="Coin" type="Area2D"]
-script = SubResource("GDScript_rx5ko")
+script = ExtResource("1_jgl7m")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(-2, -1.19209e-07)
@@ -75,8 +171,18 @@ scale = Vector2(0.2, 0.2)
 sprite_frames = SubResource("SpriteFrames_0hujw")
 animation = &"Coin Animation"
 autoplay = "Coin Animation"
-frame_progress = 0.590652
+frame_progress = 0.647106
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-1, 0)
 shape = SubResource("CircleShape2D_44gcr")
+
+[node name="PickupSound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_13n4v")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+root_node = NodePath("../PickupSound")
+libraries = {
+"": SubResource("AnimationLibrary_qsb3l")
+}
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
