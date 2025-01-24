@@ -1,8 +1,9 @@
-[gd_scene load_steps=9 format=3 uid="uid://b2x3id6ngkfxw"]
+[gd_scene load_steps=10 format=3 uid="uid://b2x3id6ngkfxw"]
 
 [ext_resource type="Texture2D" uid="uid://drtgedgr4cbrj" path="res://Assets/SmallMarioSpriteSheet.png" id="1_b3wyw"]
 [ext_resource type="Script" path="res://Scripts/mario.gd" id="1_kdsuy"]
 [ext_resource type="AudioStream" uid="uid://cjcd77k8pu3v3" path="res://Sounds/maro-jump-sound-effect_1.mp3" id="3_onae3"]
+[ext_resource type="AudioStream" uid="uid://b66a0n0r8prqt" path="res://Sounds/cashmoney sound effect.mp3" id="4_vynjw"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_k5xot"]
 size = Vector2(12, 15)
@@ -83,3 +84,6 @@ speed_scale = 10.0
 stream = ExtResource("3_onae3")
 volume_db = -40.0
 pitch_scale = 0.95
+
+[node name="CoinPickupSound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("4_vynjw")

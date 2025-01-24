@@ -60,7 +60,13 @@ func _physics_process(delta):
 	# Respawn
 	if Input.is_action_just_pressed("Respawn"):
 		self.position = PlayerStarPos
+		get_tree().reload_current_scene()
+		Global.PlayerHp -= 1
+		Global.TotalCoins = 0
 	
 	#if position.y > 200:
 		#self.position = PlayerStarPos
+	
+	
+	
 

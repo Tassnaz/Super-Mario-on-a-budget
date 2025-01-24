@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://ydnsv8vu06r0"]
+[gd_scene load_steps=12 format=3 uid="uid://ydnsv8vu06r0"]
 
 [ext_resource type="Script" path="res://Scripts/cameraFollow.gd" id="1_66nfo"]
 [ext_resource type="TileSet" uid="uid://2k0djpssx2q0" path="res://TileSets/OverWorldTiles.tres" id="2_1f3ec"]
@@ -10,6 +10,7 @@
 [ext_resource type="PackedScene" uid="uid://cilnvql81pv1d" path="res://Scenes/kill_area.tscn" id="6_lkhsg"]
 [ext_resource type="PackedScene" uid="uid://5orma837byed" path="res://Scenes/coin.tscn" id="9_hds4m"]
 [ext_resource type="Script" path="res://Scripts/coin UI.gd" id="9_v2epr"]
+[ext_resource type="Script" path="res://Scenes/Coins to enter.gd" id="11_mw4su"]
 
 [node name="Level 1" type="Node2D"]
 position = Vector2(7, 27)
@@ -102,3 +103,15 @@ theme_override_fonts/font = ExtResource("4_aa6mv")
 theme_override_font_sizes/font_size = 30
 text = "Coins :"
 script = ExtResource("9_v2epr")
+
+[node name="Coins to enter" type="Label" parent="."]
+offset_left = 3708.0
+offset_top = -110.0
+offset_right = 3775.0
+offset_bottom = -87.0
+theme_override_fonts/font = ExtResource("4_aa6mv")
+theme_override_font_sizes/font_size = 20
+text = "Coins/10"
+horizontal_alignment = 1
+vertical_alignment = 1
+script = ExtResource("11_mw4su")

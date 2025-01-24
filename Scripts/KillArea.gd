@@ -9,5 +9,5 @@ func _on_body_entered(body):
 		get_tree().reload_current_scene()
 		Global.TotalCoins = 0
 	
-	if Global.PlayerHp == 0:
+	if Global.PlayerHp <= 0:
 		get_tree().quit()
