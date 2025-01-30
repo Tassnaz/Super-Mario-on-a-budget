@@ -83,12 +83,13 @@ autoplay = true
 layer = 2
 
 [node name="HP UI" type="Label" parent="UI"]
-offset_left = 5.0
-offset_right = 101.0
-offset_bottom = 51.0
-theme_override_constants/line_spacing = 100
+offset_left = 6.0
+offset_top = 4.0
+offset_right = 120.0
+offset_bottom = 55.0
+theme_override_constants/line_spacing = 0
 theme_override_fonts/font = ExtResource("4_aa6mv")
-theme_override_font_sizes/font_size = 40
+theme_override_font_sizes/font_size = 48
 text = "lives:"
 horizontal_alignment = 1
 vertical_alignment = 1
@@ -96,21 +97,22 @@ script = ExtResource("4_a50r6")
 
 [node name="Coin UI" type="Label" parent="UI"]
 offset_left = 5.0
-offset_top = 39.0
-offset_right = 100.0
-offset_bottom = 70.0
+offset_top = 43.0
+offset_right = 105.0
+offset_bottom = 75.0
 theme_override_fonts/font = ExtResource("4_aa6mv")
-theme_override_font_sizes/font_size = 30
+theme_override_font_sizes/font_size = 32
 text = "Coins :"
 script = ExtResource("9_v2epr")
 
 [node name="Coins to enter" type="Label" parent="."]
-offset_left = 3708.0
-offset_top = -110.0
-offset_right = 3775.0
-offset_bottom = -87.0
+offset_left = 3763.0
+offset_top = -151.0
+offset_right = 3891.0
+offset_bottom = -119.0
+theme_override_constants/line_spacing = 0
 theme_override_fonts/font = ExtResource("4_aa6mv")
-theme_override_font_sizes/font_size = 20
+theme_override_font_sizes/font_size = 32
 text = "Coins/10"
 horizontal_alignment = 1
 vertical_alignment = 1
