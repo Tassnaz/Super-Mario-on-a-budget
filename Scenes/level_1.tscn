@@ -10,7 +10,7 @@
 [ext_resource type="PackedScene" uid="uid://cilnvql81pv1d" path="res://Scenes/kill_area.tscn" id="6_lkhsg"]
 [ext_resource type="PackedScene" uid="uid://5orma837byed" path="res://Scenes/coin.tscn" id="9_hds4m"]
 [ext_resource type="Script" path="res://Scripts/coin UI.gd" id="9_v2epr"]
-[ext_resource type="Script" path="res://Scenes/Coins to enter.gd" id="11_mw4su"]
+[ext_resource type="Script" path="res://Scripts/Coins to enter.gd" id="11_mw4su"]
 
 [node name="Level 1" type="Node2D"]
 position = Vector2(7, 27)
