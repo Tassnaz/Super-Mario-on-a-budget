@@ -63,9 +63,16 @@ func _physics_process(delta):
 		get_tree().reload_current_scene()
 		Global.PlayerHp -= 1
 		Global.TotalCoins = 0
+		
+	if Global.KillSignal == true:
+		Global.KillSignal = false
+		Global.PlayerHp -= 1
+		get_tree().reload_current_scene()
+		
+		
 	
-	#if position.y > 200:
-		#self.position = PlayerStarPos
+	
+	
 	
 	
 	

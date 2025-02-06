@@ -1,16 +1,17 @@
-[gd_scene load_steps=12 format=3 uid="uid://ydnsv8vu06r0"]
+[gd_scene load_steps=13 format=3 uid="uid://ydnsv8vu06r0"]
 
 [ext_resource type="Script" path="res://Scripts/cameraFollow.gd" id="1_66nfo"]
 [ext_resource type="TileSet" uid="uid://2k0djpssx2q0" path="res://TileSets/OverWorldTiles.tres" id="2_1f3ec"]
 [ext_resource type="PackedScene" uid="uid://b2x3id6ngkfxw" path="res://Scenes/mario.tscn" id="3_yrkdl"]
 [ext_resource type="Script" path="res://Scripts/HP UI.gd" id="4_a50r6"]
-[ext_resource type="FontFile" uid="uid://b53llb6edltt7" path="res://Assets/Fonts/SuperMario85.ttf" id="4_aa6mv"]
 [ext_resource type="AudioStream" uid="uid://cdee4gkc7iaai" path="res://Sounds/01-main-theme-overworld.mp3" id="4_y50rm"]
 [ext_resource type="PackedScene" uid="uid://b6nd052t1na27" path="res://Scenes/go_to_next_lvl.tscn" id="5_hr6b2"]
 [ext_resource type="PackedScene" uid="uid://cilnvql81pv1d" path="res://Scenes/kill_area.tscn" id="6_lkhsg"]
 [ext_resource type="PackedScene" uid="uid://5orma837byed" path="res://Scenes/coin.tscn" id="9_hds4m"]
 [ext_resource type="Script" path="res://Scripts/coin UI.gd" id="9_v2epr"]
+[ext_resource type="FontFile" uid="uid://7c8g7sblobhu" path="res://Assets/Fonts/NESCyrillic.ttf" id="11_77bt5"]
 [ext_resource type="Script" path="res://Scripts/Coins to enter.gd" id="11_mw4su"]
+[ext_resource type="PackedScene" uid="uid://wq2ncphny4q8" path="res://Scenes/Enemy.tscn" id="12_uvrxx"]
 
 [node name="Level 1" type="Node2D"]
 position = Vector2(7, 27)
@@ -83,12 +84,12 @@ autoplay = true
 layer = 2
 
 [node name="HP UI" type="Label" parent="UI"]
-offset_left = 6.0
-offset_top = 4.0
-offset_right = 120.0
-offset_bottom = 55.0
+offset_left = 5.0
+offset_top = -9.0
+offset_right = 131.0
+offset_bottom = 42.0
 theme_override_constants/line_spacing = 0
-theme_override_fonts/font = ExtResource("4_aa6mv")
+theme_override_fonts/font = ExtResource("11_77bt5")
 theme_override_font_sizes/font_size = 48
 text = "lives:"
 horizontal_alignment = 1
@@ -96,24 +97,29 @@ vertical_alignment = 1
 script = ExtResource("4_a50r6")
 
 [node name="Coin UI" type="Label" parent="UI"]
-offset_left = 5.0
-offset_top = 43.0
-offset_right = 105.0
-offset_bottom = 75.0
-theme_override_fonts/font = ExtResource("4_aa6mv")
+offset_left = 4.0
+offset_top = 33.0
+offset_right = 145.0
+offset_bottom = 68.0
+theme_override_fonts/font = ExtResource("11_77bt5")
 theme_override_font_sizes/font_size = 32
 text = "Coins :"
 script = ExtResource("9_v2epr")
 
 [node name="Coins to enter" type="Label" parent="."]
-offset_left = 3763.0
-offset_top = -151.0
-offset_right = 3891.0
-offset_bottom = -119.0
+offset_left = 3784.0
+offset_top = -156.0
+offset_right = 3912.0
+offset_bottom = -124.0
 theme_override_constants/line_spacing = 0
-theme_override_fonts/font = ExtResource("4_aa6mv")
+theme_override_fonts/font = ExtResource("11_77bt5")
 theme_override_font_sizes/font_size = 32
 text = "Coins/10"
 horizontal_alignment = 1
 vertical_alignment = 1
 script = ExtResource("11_mw4su")
+
+[node name="Enemy" parent="." instance=ExtResource("12_uvrxx")]
+position = Vector2(420, -16)
+Speed = 80.0
+MaxMoveDistance = 350
