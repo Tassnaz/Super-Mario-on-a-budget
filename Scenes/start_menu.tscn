@@ -1,6 +1,8 @@
-[gd_scene load_steps=2 format=3 uid="uid://6v3mpuy3n33l"]
+[gd_scene load_steps=4 format=3 uid="uid://6v3mpuy3n33l"]
 
 [ext_resource type="Texture2D" uid="uid://cpbigwovs56kr" path="res://Assets/super budget bros.png" id="1_ea6fv"]
+[ext_resource type="Script" path="res://Scripts/start_menu.gd" id="1_rpm1q"]
+[ext_resource type="FontFile" uid="uid://7c8g7sblobhu" path="res://Assets/Fonts/NESCyrillic.ttf" id="2_64n35"]
 
 [node name="StartMenu" type="Control"]
 layout_mode = 3
@@ -9,6 +11,8 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_rpm1q")
+ScenePath = "res://Scenes/level_1.tscn"
 
 [node name="Background" type="ColorRect" parent="."]
 layout_mode = 1
@@ -27,3 +31,38 @@ offset_right = 1151.0
 offset_bottom = 422.0
 texture = ExtResource("1_ea6fv")
 expand_mode = 1
+
+[node name="HboxForButtons" type="HBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -1.0
+offset_top = -158.0
+offset_right = -1.0
+offset_bottom = -127.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_constants/separation = 100
+alignment = 1
+
+[node name="Start New Game" type="Button" parent="HboxForButtons"]
+layout_mode = 2
+mouse_default_cursor_shape = 2
+theme_override_fonts/font = ExtResource("2_64n35")
+theme_override_font_sizes/font_size = 70
+text = "Start New Game"
+
+[node name="Quit Game" type="Button" parent="HboxForButtons"]
+layout_mode = 2
+mouse_default_cursor_shape = 2
+theme_override_fonts/font = ExtResource("2_64n35")
+theme_override_font_sizes/font_size = 70
+text = "Quit GAme
+"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+
+[connection signal="button_down" from="HboxForButtons/Start New Game" to="." method="_on_start_new_game_button_down"]
+[connection signal="button_down" from="HboxForButtons/Quit Game" to="." method="_on_quit_game_button_down"]
