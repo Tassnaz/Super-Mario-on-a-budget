@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://cv0f1uybu2wpq"]
 
-[ext_resource type="Script" path="res://Scripts/cameraFollow.gd" id="1_gawhw"]
+[ext_resource type="Script" path="res://Scripts/CameraFollow.gd" id="1_gawhw"]
 [ext_resource type="TileSet" uid="uid://dc5vxjxvc6fph" path="res://TileSets/smb2.tres" id="2_xtrps"]
 [ext_resource type="PackedScene" uid="uid://b2x3id6ngkfxw" path="res://Scenes/mario.tscn" id="3_no5pq"]
 [ext_resource type="PackedScene" uid="uid://b6nd052t1na27" path="res://Scenes/go_to_next_lvl.tscn" id="4_yrisv"]

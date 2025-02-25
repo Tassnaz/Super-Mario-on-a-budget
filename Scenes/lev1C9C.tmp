@@ -1,6 +1,6 @@
 [gd_scene load_steps=13 format=3 uid="uid://ydnsv8vu06r0"]
 
-[ext_resource type="Script" path="res://Scripts/CameraFollow.gd" id="1_w48eo"]
+[ext_resource type="Script" path="res://Scripts/Level1.gd" id="1_66nfo"]
 [ext_resource type="TileSet" uid="uid://2k0djpssx2q0" path="res://TileSets/OverWorldTiles.tres" id="2_1f3ec"]
 [ext_resource type="PackedScene" uid="uid://b2x3id6ngkfxw" path="res://Scenes/mario.tscn" id="3_yrkdl"]
 [ext_resource type="Script" path="res://Scripts/HP UI.gd" id="4_a50r6"]
@@ -15,7 +15,7 @@
 
 [node name="Level 1" type="Node2D"]
 position = Vector2(7, 27)
-script = ExtResource("1_w48eo")
+script = ExtResource("1_66nfo")
 
 [node name="OverWorldTiles" type="TileMap" parent="."]
 position = Vector2(1, 0)
@@ -164,3 +164,8 @@ text = "Coins/10"
 horizontal_alignment = 1
 vertical_alignment = 1
 script = ExtResource("11_mw4su")
+
+[node name="Timer" type="Timer" parent="."]
+process_callback = 0
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

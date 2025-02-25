@@ -24,13 +24,14 @@ func _physics_process(delta):
 	
 	velocity.x = clamp(velocity.x, -Speed, Speed)
 	
+	
 	# Move right/left
 	if Input.is_action_pressed("Right"):
 		velocity.x += Accel
 		$Sprite2D.scale.x = 1
 		
 		$AnimationPlayer.play("Sprinting")
-	
+		
 	elif Input.is_action_pressed("Left"):
 		velocity.x -= Accel
 		$Sprite2D.scale.x = -1
@@ -51,10 +52,18 @@ func _physics_process(delta):
 	if is_on_floor() and Input.is_action_just_pressed("Jump"):
 		velocity.y = -JumpForce
 		$JumpSound.play(0.14)
-	
+		
 	if not is_on_floor():
 		$AnimationPlayer.stop()
 		$Sprite2D.frame = 5
+	
+	
+	# Jump on enemy
+	if Global.JumpOnEnemy == true:
+		velocity.y = -JumpForce
+		
+	if not is_on_floor():
+		Global.JumpOnEnemy = false
 	
 	
 	# Respawn
@@ -67,6 +76,7 @@ func _physics_process(delta):
 	if Global.KillSignal == true:
 		Global.KillSignal = false
 		Global.PlayerHp -= 1
+		Global.TotalCoins = 0
 		get_tree().reload_current_scene()
 		
 		
