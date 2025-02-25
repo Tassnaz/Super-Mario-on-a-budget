@@ -29,19 +29,19 @@ layer_1/tile_data = PackedInt32Array(0, 1, 0, 1, 1, 0, 3, 1, 0, 2, 1, 0, 4, 1, 0
 [node name="Coins" type="Node" parent="."]
 
 [node name="Coin" parent="Coins" instance=ExtResource("9_hds4m")]
-position = Vector2(377, 13)
+position = Vector2(456, -22)
 
 [node name="Coin2" parent="Coins" instance=ExtResource("9_hds4m")]
-position = Vector2(703, 13)
+position = Vector2(617, -35)
 
 [node name="Coin3" parent="Coins" instance=ExtResource("9_hds4m")]
-position = Vector2(1036, 16)
+position = Vector2(935, -53)
 
 [node name="Coin4" parent="Coins" instance=ExtResource("9_hds4m")]
 position = Vector2(1265, 14)
 
 [node name="Coin5" parent="Coins" instance=ExtResource("9_hds4m")]
-position = Vector2(2886, 17)
+position = Vector2(3161, -55)
 
 [node name="Coin6" parent="Coins" instance=ExtResource("9_hds4m")]
 position = Vector2(1568, -57)

@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://cky88slaacefc"
+path="res://.godot/imported/BigMike dör.mp3-8f38ae0def0adeb5377bdf374bb16dfe.mp3str"
+
+[deps]
+
+source_file="res://Sounds/BigMike dör.mp3"
+dest_files=["res://.godot/imported/BigMike dör.mp3-8f38ae0def0adeb5377bdf374bb16dfe.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

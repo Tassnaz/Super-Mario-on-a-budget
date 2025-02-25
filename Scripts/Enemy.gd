@@ -22,9 +22,11 @@ func _physics_process(_delta):
 	if MovingLeft == true:
 		velocity.x = -Speed
 		$Sprite2D.scale.x = -1
+		$AnimationPlayer.play("Sprinting")
 	else:
 		velocity.x = Speed
 		$Sprite2D.scale.x = 1
+		$AnimationPlayer.play("Sprinting")
 	
 	if position.x >= enemyStartPos.x:
 		MovingLeft = true
@@ -36,7 +38,12 @@ func _physics_process(_delta):
 
 func _on_damage_hit_box_body_entered(body):
 	if body.name == "Mario":
+		visible = false
+		$CollisionShape2D.queue_free()
+		$DeathSound.play(0)
+		await get_tree().create_timer(0.38).timeout
 		queue_free()
+
 
 
 func _on_attack_hit_box_body_entered(body):
