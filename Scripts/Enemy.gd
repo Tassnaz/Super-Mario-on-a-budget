@@ -56,4 +56,5 @@ func _on_attack_hit_box_body_entered(body):
 		Global.KillSignal = true
 		
 	if Global.PlayerHp <= 0:
-		get_tree().quit()
+		Global.PlayerHp = 3
+		get_tree().change_scene_to_file("res://Scenes/game_over_screen.tscn")

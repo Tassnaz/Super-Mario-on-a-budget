@@ -11,7 +11,7 @@
 [ext_resource type="Script" path="res://Scripts/coin UI.gd" id="9_v2epr"]
 [ext_resource type="FontFile" uid="uid://7c8g7sblobhu" path="res://Assets/Fonts/NESCyrillic.ttf" id="11_77bt5"]
 [ext_resource type="Script" path="res://Scripts/Coins to enter.gd" id="11_mw4su"]
-[ext_resource type="PackedScene" uid="uid://wq2ncphny4q8" path="res://Scenes/Enemy.tscn" id="12_uvrxx"]
+[ext_resource type="PackedScene" uid="uid://wq2ncphny4q8" path="res://Scenes/enemy.tscn" id="12_uvrxx"]
 
 [node name="Level 1" type="Node2D"]
 position = Vector2(7, 27)
