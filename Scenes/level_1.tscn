@@ -1,6 +1,6 @@
 [gd_scene load_steps=13 format=3 uid="uid://ydnsv8vu06r0"]
 
-[ext_resource type="Script" path="res://Scripts/CameraFollow.gd" id="1_w48eo"]
+[ext_resource type="Script" path="res://Scenes/CameraFollow1.gd" id="1_wdm0p"]
 [ext_resource type="TileSet" uid="uid://2k0djpssx2q0" path="res://TileSets/OverWorldTiles.tres" id="2_1f3ec"]
 [ext_resource type="PackedScene" uid="uid://b2x3id6ngkfxw" path="res://Scenes/mario.tscn" id="3_yrkdl"]
 [ext_resource type="Script" path="res://Scripts/HP UI.gd" id="4_a50r6"]
@@ -11,11 +11,11 @@
 [ext_resource type="Script" path="res://Scripts/coin UI.gd" id="9_v2epr"]
 [ext_resource type="FontFile" uid="uid://7c8g7sblobhu" path="res://Assets/Fonts/NESCyrillic.ttf" id="11_77bt5"]
 [ext_resource type="Script" path="res://Scripts/Coins to enter.gd" id="11_mw4su"]
-[ext_resource type="PackedScene" uid="uid://wq2ncphny4q8" path="res://Scenes/Enemy.tscn" id="12_uvrxx"]
+[ext_resource type="PackedScene" uid="uid://wq2ncphny4q8" path="res://Scenes/enemy.tscn" id="12_uvrxx"]
 
 [node name="Level 1" type="Node2D"]
 position = Vector2(7, 27)
-script = ExtResource("1_w48eo")
+script = ExtResource("1_wdm0p")
 
 [node name="OverWorldTiles" type="TileMap" parent="."]
 position = Vector2(1, 0)

@@ -80,10 +80,9 @@ func _physics_process(delta):
 		get_tree().reload_current_scene()
 		
 		
-	
-	
-	
-	
-	
-	
+		
+		
+		
+		
+
 
