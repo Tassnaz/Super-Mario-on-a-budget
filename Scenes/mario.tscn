@@ -63,6 +63,7 @@ _data = {
 }
 
 [node name="Mario" type="CharacterBody2D"]
+z_index = 1
 script = ExtResource("1_kdsuy")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]

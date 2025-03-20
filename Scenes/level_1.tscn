@@ -1,6 +1,6 @@
 [gd_scene load_steps=13 format=3 uid="uid://ydnsv8vu06r0"]
 
-[ext_resource type="Script" path="res://Scenes/CameraFollow1.gd" id="1_wdm0p"]
+[ext_resource type="Script" path="res://Scripts/CameraFollow1.gd" id="1_wdm0p"]
 [ext_resource type="TileSet" uid="uid://2k0djpssx2q0" path="res://TileSets/OverWorldTiles.tres" id="2_1f3ec"]
 [ext_resource type="PackedScene" uid="uid://b2x3id6ngkfxw" path="res://Scenes/mario.tscn" id="3_yrkdl"]
 [ext_resource type="Script" path="res://Scripts/HP UI.gd" id="4_a50r6"]
