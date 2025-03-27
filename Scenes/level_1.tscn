@@ -1,6 +1,6 @@
-[gd_scene load_steps=12 format=3 uid="uid://ydnsv8vu06r0"]
+[gd_scene load_steps=10 format=3 uid="uid://ydnsv8vu06r0"]
 
-[ext_resource type="Script" path="res://Scripts/CameraFollow1.gd" id="1_wdm0p"]
+[ext_resource type="Script" path="res://Scripts/Level 1.gd" id="1_wdm0p"]
 [ext_resource type="TileSet" uid="uid://2k0djpssx2q0" path="res://TileSets/OverWorldTiles.tres" id="2_1f3ec"]
 [ext_resource type="PackedScene" uid="uid://b2x3id6ngkfxw" path="res://Scenes/mario.tscn" id="3_yrkdl"]
 [ext_resource type="AudioStream" uid="uid://cdee4gkc7iaai" path="res://Sounds/01-main-theme-overworld.mp3" id="4_y50rm"]
@@ -8,13 +8,22 @@
 [ext_resource type="PackedScene" uid="uid://cilnvql81pv1d" path="res://Scenes/kill_area.tscn" id="6_lkhsg"]
 [ext_resource type="PackedScene" uid="uid://5orma837byed" path="res://Scenes/coin.tscn" id="9_hds4m"]
 [ext_resource type="PackedScene" uid="uid://cm5g0pyptltq7" path="res://Scenes/ui.tscn" id="11_6vreo"]
-[ext_resource type="FontFile" uid="uid://7c8g7sblobhu" path="res://Assets/Fonts/NESCyrillic.ttf" id="11_77bt5"]
-[ext_resource type="Script" path="res://Scripts/Coins to enter.gd" id="11_mw4su"]
-[ext_resource type="PackedScene" uid="uid://wq2ncphny4q8" path="res://Scenes/Enemy.tscn" id="12_uvrxx"]
+[ext_resource type="PackedScene" uid="uid://wq2ncphny4q8" path="res://Scenes/enemy.tscn" id="12_uvrxx"]
 
 [node name="Level 1" type="Node2D"]
 position = Vector2(7, 27)
 script = ExtResource("1_wdm0p")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="UI" parent="CanvasLayer" instance=ExtResource("11_6vreo")]
+anchors_preset = 0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_right = 1152.0
+offset_bottom = 648.0
+grow_horizontal = 1
+grow_vertical = 1
 
 [node name="OverWorldTiles" type="TileMap" parent="."]
 position = Vector2(1, 0)
@@ -124,27 +133,3 @@ MaxMoveDistance = 128
 [node name="BigMike 11" parent="Enemies" instance=ExtResource("12_uvrxx")]
 position = Vector2(3128, 9)
 MaxMoveDistance = 143
-
-[node name="Coins to enter" type="Label" parent="."]
-offset_left = 3784.0
-offset_top = -156.0
-offset_right = 3912.0
-offset_bottom = -124.0
-theme_override_constants/line_spacing = 0
-theme_override_fonts/font = ExtResource("11_77bt5")
-theme_override_font_sizes/font_size = 32
-text = "Coins/10"
-horizontal_alignment = 1
-vertical_alignment = 1
-script = ExtResource("11_mw4su")
-
-[node name="CanvasLayer" type="CanvasLayer" parent="."]
-
-[node name="UI" parent="CanvasLayer" instance=ExtResource("11_6vreo")]
-anchors_preset = 0
-anchor_right = 0.0
-anchor_bottom = 0.0
-offset_right = 1152.0
-offset_bottom = 648.0
-grow_horizontal = 1
-grow_vertical = 1
