@@ -73,7 +73,7 @@ func _physics_process(delta):
 		Global.PlayerHp -= 1
 		Global.TotalCoins = 0
 		
-	if Global.KillSignal == true:
+	if Global.KillSignal == true and Global.PlayerHp >=0:
 		Global.KillSignal = false
 		Global.PlayerHp -= 1
 		Global.TotalCoins = 0

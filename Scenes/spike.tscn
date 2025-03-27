@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://c2biokufmivnc"]
+
+[ext_resource type="Script" path="res://Spike.gd" id="1_fgtnl"]
+[ext_resource type="Texture2D" uid="uid://dng8utk5y5hk0" path="res://Assets/FourSeasonsPlatformer/objects_/staticObjects_.png" id="2_vw7fv"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_l8ehq"]
+size = Vector2(14, 6)
+
+[node name="Spike" type="Area2D"]
+script = ExtResource("1_fgtnl")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_vw7fv")
+region_enabled = true
+region_rect = Rect2(49, 123, 14, 5)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_l8ehq")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

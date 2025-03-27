@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://tj5wbrjo1ic7"]
+[gd_scene load_steps=16 format=3 uid="uid://tj5wbrjo1ic7"]
 
 [ext_resource type="TileSet" uid="uid://cib3vbjvi0x2b" path="res://TileSets/FourSeasonsPlatformer.tres" id="1_i0qf5"]
 [ext_resource type="Script" path="res://Scripts/CameraFollow2.gd" id="1_w4fi2"]
@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://44r7b2qirrdd" path="res://Scenes/Platform.tscn" id="5_gghxr"]
 [ext_resource type="PackedScene" uid="uid://cilnvql81pv1d" path="res://Scenes/kill_area.tscn" id="6_q7g30"]
 [ext_resource type="PackedScene" uid="uid://cm5g0pyptltq7" path="res://Scenes/ui.tscn" id="7_of4fg"]
+[ext_resource type="PackedScene" uid="uid://c2biokufmivnc" path="res://Scenes/spike.tscn" id="8_wh6la"]
 
 [sub_resource type="Animation" id="Animation_v4uc8"]
 length = 0.001
@@ -107,6 +108,9 @@ limit_right = 3233
 position_smoothing_enabled = true
 script = ExtResource("4_n1jvc")
 
+[node name="KillArea" parent="." instance=ExtResource("6_q7g30")]
+position = Vector2(16, 30)
+
 [node name="Platforms" type="Node" parent="."]
 
 [node name="Platform" parent="Platforms" instance=ExtResource("5_gghxr")]
@@ -142,9 +146,6 @@ shape = SubResource("RectangleShape2D_gvrv6")
 position = Vector2(3248, -18)
 shape = SubResource("RectangleShape2D_gvrv6")
 
-[node name="KillArea" parent="." instance=ExtResource("6_q7g30")]
-position = Vector2(-776, 30)
-
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="UI" parent="CanvasLayer" instance=ExtResource("7_of4fg")]
@@ -153,3 +154,23 @@ anchor_right = 0.0
 anchor_bottom = 0.0
 grow_horizontal = 1
 grow_vertical = 1
+
+[node name="Spikes" type="Node" parent="."]
+
+[node name="Spike" parent="Spikes" instance=ExtResource("8_wh6la")]
+position = Vector2(1546, -258)
+
+[node name="Spike2" parent="Spikes" instance=ExtResource("8_wh6la")]
+position = Vector2(1560, -258)
+
+[node name="Spike3" parent="Spikes" instance=ExtResource("8_wh6la")]
+position = Vector2(1642, -258)
+
+[node name="Spike4" parent="Spikes" instance=ExtResource("8_wh6la")]
+position = Vector2(1656, -258)
+
+[node name="Spike5" parent="Spikes" instance=ExtResource("8_wh6la")]
+position = Vector2(1738, -258)
+
+[node name="Spike6" parent="Spikes" instance=ExtResource("8_wh6la")]
+position = Vector2(1752, -258)
