@@ -12,7 +12,7 @@
 [ext_resource type="PackedScene" uid="uid://cm5g0pyptltq7" path="res://Scenes/ui.tscn" id="7_of4fg"]
 [ext_resource type="PackedScene" uid="uid://c2biokufmivnc" path="res://Scenes/spike.tscn" id="8_wh6la"]
 [ext_resource type="PackedScene" uid="uid://5orma837byed" path="res://Scenes/coin.tscn" id="9_dgxrs"]
-[ext_resource type="PackedScene" uid="uid://wq2ncphny4q8" path="res://Scenes/enemy.tscn" id="10_rs8t1"]
+[ext_resource type="PackedScene" uid="uid://wq2ncphny4q8" path="res://Scenes/Enemy.tscn" id="10_rs8t1"]
 [ext_resource type="Texture2D" uid="uid://c31w4ljyio62s" path="res://Assets/Backgrounds/Clouds/Clouds 2/1.png" id="11_tj5gb"]
 [ext_resource type="PackedScene" uid="uid://b6nd052t1na27" path="res://Scenes/go_to_next_lvl.tscn" id="15_vuasv"]
 [ext_resource type="AudioStream" uid="uid://cq2ar78hj6qye" path="res://Sounds/New Super Mario Bros. Wii Music - World 1 Map - Fields.mp3" id="16_s3hep"]

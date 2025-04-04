@@ -8,7 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://cilnvql81pv1d" path="res://Scenes/kill_area.tscn" id="6_lkhsg"]
 [ext_resource type="PackedScene" uid="uid://5orma837byed" path="res://Scenes/coin.tscn" id="9_hds4m"]
 [ext_resource type="PackedScene" uid="uid://cm5g0pyptltq7" path="res://Scenes/ui.tscn" id="11_6vreo"]
-[ext_resource type="PackedScene" uid="uid://wq2ncphny4q8" path="res://Scenes/enemy.tscn" id="12_uvrxx"]
+[ext_resource type="PackedScene" uid="uid://wq2ncphny4q8" path="res://Scenes/Enemy.tscn" id="12_uvrxx"]
 
 [node name="Level 1" type="Node2D"]
 position = Vector2(7, 27)
