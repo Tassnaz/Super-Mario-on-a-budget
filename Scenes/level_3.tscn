@@ -1,9 +1,9 @@
 [gd_scene load_steps=28 format=3 uid="uid://d4gwowh82xxjc"]
 
 [ext_resource type="TileSet" uid="uid://cib3vbjvi0x2b" path="res://TileSets/FourSeasonsPlatformer.tres" id="1_7pecc"]
-[ext_resource type="Script" path="res://Scripts/Level 3.gd" id="1_nr1oc"]
+[ext_resource type="Script" uid="uid://d3qxfh4frqirf" path="res://Scripts/Level 3.gd" id="1_nr1oc"]
 [ext_resource type="PackedScene" uid="uid://cm5g0pyptltq7" path="res://Scenes/ui.tscn" id="2_gm4cd"]
-[ext_resource type="Script" path="res://Scripts/Camera2D.gd" id="2_y2ktf"]
+[ext_resource type="Script" uid="uid://i1s3ldnmifcx" path="res://Scripts/Camera2D.gd" id="2_y2ktf"]
 [ext_resource type="PackedScene" uid="uid://b2x3id6ngkfxw" path="res://Scenes/mario.tscn" id="3_bp0em"]
 [ext_resource type="PackedScene" uid="uid://cilnvql81pv1d" path="res://Scenes/kill_area.tscn" id="5_15dqi"]
 [ext_resource type="PackedScene" uid="uid://c2biokufmivnc" path="res://Scenes/spike.tscn" id="6_1d48u"]
@@ -49,8 +49,8 @@ tracks/0/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_h0sey"]
 _data = {
-"RESET": SubResource("Animation_mh6gt"),
-"Slam": SubResource("Animation_g0025")
+&"RESET": SubResource("Animation_mh6gt"),
+&"Slam": SubResource("Animation_g0025")
 }
 
 [sub_resource type="Animation" id="Animation_jt274"]
@@ -87,8 +87,8 @@ tracks/0/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_xp4rv"]
 _data = {
-"RESET": SubResource("Animation_jt274"),
-"Slam": SubResource("Animation_etkpm")
+&"RESET": SubResource("Animation_jt274"),
+&"Slam": SubResource("Animation_etkpm")
 }
 
 [sub_resource type="Animation" id="Animation_4nh43"]
@@ -125,8 +125,8 @@ tracks/0/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_b00mj"]
 _data = {
-"RESET": SubResource("Animation_4nh43"),
-"Slam": SubResource("Animation_iairw")
+&"RESET": SubResource("Animation_4nh43"),
+&"Slam": SubResource("Animation_iairw")
 }
 
 [sub_resource type="Animation" id="Animation_teupn"]
@@ -163,8 +163,8 @@ tracks/0/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_l7oye"]
 _data = {
-"RESET": SubResource("Animation_teupn"),
-"Slam": SubResource("Animation_8x3mu")
+&"RESET": SubResource("Animation_teupn"),
+&"Slam": SubResource("Animation_8x3mu")
 }
 
 [sub_resource type="Animation" id="Animation_sdwm2"]
@@ -201,8 +201,8 @@ tracks/0/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_k5not"]
 _data = {
-"RESET": SubResource("Animation_sdwm2"),
-"Slam": SubResource("Animation_dxygk")
+&"RESET": SubResource("Animation_sdwm2"),
+&"Slam": SubResource("Animation_dxygk")
 }
 
 [node name="Level 3" type="Node2D"]
@@ -428,7 +428,7 @@ position = Vector2(1600, 113)
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Brickheads/Brickhead"]
 libraries = {
-"": SubResource("AnimationLibrary_h0sey")
+&"": SubResource("AnimationLibrary_h0sey")
 }
 autoplay = "Slam"
 
@@ -437,7 +437,7 @@ position = Vector2(1681, 113)
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Brickheads/Brickhead2"]
 libraries = {
-"": SubResource("AnimationLibrary_xp4rv")
+&"": SubResource("AnimationLibrary_xp4rv")
 }
 autoplay = "Slam"
 
@@ -446,7 +446,7 @@ position = Vector2(1762, 113)
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Brickheads/Brickhead3"]
 libraries = {
-"": SubResource("AnimationLibrary_b00mj")
+&"": SubResource("AnimationLibrary_b00mj")
 }
 autoplay = "Slam"
 
@@ -455,7 +455,7 @@ position = Vector2(1841, 113)
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Brickheads/Brickhead4"]
 libraries = {
-"": SubResource("AnimationLibrary_l7oye")
+&"": SubResource("AnimationLibrary_l7oye")
 }
 autoplay = "Slam"
 
@@ -464,6 +464,6 @@ position = Vector2(1920, 113)
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Brickheads/Brickhead5"]
 libraries = {
-"": SubResource("AnimationLibrary_k5not")
+&"": SubResource("AnimationLibrary_k5not")
 }
 autoplay = "Slam"

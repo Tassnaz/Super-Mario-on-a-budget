@@ -7,5 +7,3 @@ var Death = false
 var KillSignal = false
 
 var JumpOnEnemy = false
-
-
